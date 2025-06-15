@@ -1,88 +1,64 @@
 <!DOCTYPE html><html lang="az">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Azərbaycan Xəbərləri</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-    }
-    header {
-      background-color: #00284d;
-      color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-    .main-news {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .news-item {
-      background: white;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .news-item img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .news-item h2 {
-      color: #00284d;
-    }
-    .news-item p {
-      font-size: 1rem;
-    }
-    footer {
-      background-color: #00284d;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Roboto', sans-serif; background-color: #f2f2f2; color: #333; }
+    header { background-color: #b90000; padding: 15px 20px; color: white; }
+    header h1 { font-size: 24px; }
+    nav { background-color: #fff; border-bottom: 1px solid #ccc; }
+    nav ul { display: flex; list-style: none; overflow-x: auto; }
+    nav li { padding: 15px 20px; }
+    nav a { text-decoration: none; color: #b90000; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    .container { padding: 20px; max-width: 1100px; margin: auto; }
+    .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .news-item { background-color: white; padding: 15px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .news-item h2 { font-size: 18px; margin-bottom: 10px; color: #b90000; }
+    .news-item p { font-size: 14px; }
+    footer { text-align: center; font-size: 13px; color: #777; padding: 20px; }
   </style>
 </head>
 <body>
   <header>
-    <div><strong>AZƏRBAYCAN XƏBƏRLƏRİ</strong></div>
-    <nav>
-      <a href="#">Ana səhifə</a>
-      <a href="#">Siyasət</a>
-      <a href="#">Dünya</a>
-      <a href="#">İqtisadiyyat</a>
-      <a href="#">Sağlamlıq</a>
-    </nav>
-  </header>  <main class="main-news">
-    <section class="news-item">
-      <h2>İran-İsrail Gərginliyi Pik Həddə</h2>
-      <img src="https://via.placeholder.com/800x400" alt="iran-israel">
-      <p>2025-ci ilin iyun ayında İran və İsrail arasında artan gərginlik bölgədə ciddi narahatlığa səbəb olub. BMT tərəfindən çağırılan fövqəladə toplantıda tərəflərin silahlı qarşıdurmadan yayınması üçün diplomatik səylər artırılıb.</p>
-    </section><section class="news-item">
-  <h2>Ağsu Şərab Evinin Organic Vodkası ilə Bağlı Şok Faktlar</h2>
-  <img src="https://via.placeholder.com/800x400" alt="vodka">
-  <p>19.03.2025 - 04.06.2025 tarixləri arasında istifadə edilən Organic Vodka içkilərində narkotik maddə izləri tapılıb. 24 nəfər həyatını itirib. Məsələ ilə bağlı DTX tərəfindən istintaq davam edir.</p>
-</section>
-
-<section class="news-item">
-  <h2>Azərbaycan-Qazaxıstan Yeni Enerji Sazişi İmzalandı</h2>
-  <img src="https://via.placeholder.com/800x400" alt="azer-kazakh">
-  <p>Azərbaycan və Qazaxıstan arasında enerji sahəsində əməkdaşlığı gücləndirən yeni bir saziş imzalanıb. Bu, regionun enerji təhlükəsizliyi üçün mühüm addım sayılır.</p>
-</section>
-
-  </main>  <footer>
-    Saytın rəhbəri: ChatGPT | 2025 &copy; Azərbaycan Xəbərləri
+    <h1>Azərbaycan Xəbərləri</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Ana Səhifə</a></li>
+      <li><a href="#">Siyasət</a></li>
+      <li><a href="#">Dünya</a></li>
+      <li><a href="#">İqtisadiyyat</a></li>
+      <li><a href="#">İdman</a></li>
+      <li><a href="#">İran-İsrail Münaqişəsi</a></li>
+      <li><a href="#">Ağsu Şərab Evi</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="news-grid">
+      <div class="news-item">
+        <h2>İran və İsrail arasında gərginlik pik həddə</h2>
+        <p>2025-ci ildə artan gərginliklə İran və İsrail arasında toqquşmalar regional təhlükəsizliyi ciddi şəkildə təhdid edir. BMT çağırış edib.</p>
+      </div>
+      <div class="news-item">
+        <h2>Organic Vodka faciəsi: 24 nəfər həyatını itirdi</h2>
+        <p>19.03.2025 - 04.06.2025 tarixləri arasında istehsal edilən "Organic Vodka" adlı içki 24 nəfərin ölümünə səbəb olub. DTX istintaq aparır.</p>
+      </div>
+      <div class="news-item">
+        <h2>Azərbaycan və Türkiyə arasında yeni hərbi əməkdaşlıq</h2>
+        <p>İki qardaş ölkə arasında 2025-ci il üçün yeni hərbi anlaşma imzalanıb. Bu razılaşma regionda təhlükəsizliyi gücləndirəcək.</p>
+      </div>
+      <div class="news-item">
+        <h2>Prezidentdən yeni iqtisadi islahat paketi</h2>
+        <p>Prezident 2025-ci ilin ikinci yarısı üçün iqtisadiyyatda yeni canlanma paketi təqdim edib. Ailələrin sosial rifahı yüksələcək.</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Azərbaycan Xəbərləri. Saytın admini: ChatGPT.
   </footer>
 </body>
 </html>
